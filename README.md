@@ -41,7 +41,12 @@ As a proof of concept, GLOBE-LLM was evaluated on 8 different LLMs, with 4 train
   - Characteristics_EN: Dimension characteristics in English
   - Scale_zhCN: Dimension scale in Chinese
   - Characteristics_zhCN: Dimension characteristics in Chinese
-  - Examples: 10 human-written examples to provide the model for each dimension
+
+## Example Prompting for Open-Generation Evaluation
+
+```
+"You are rating responses to prompts based on how they score in the [current GLOBE dimension] dimension, on a 1-7 scale. Only provide a whole number between 1 and 7 without any other comments. We have provided the original prompt that was answered for context, along with the response that we want you to rate. Consider the following criteria: \n[scale for current dimension] \n\nPlease keep the following characteristics associated with this dimension into account when rating: [characteristics associated with this dimension]"
+```
 
 ## Citation
 
