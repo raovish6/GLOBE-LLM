@@ -35,7 +35,7 @@ As a proof of concept, GLOBE-LLM was evaluated on 8 different LLMs, with 4 train
   - Dimension: GLOBE dimension being measured
   - Prompt_EN: English version of the prompt
   - Prompt_zhCN: Mandarin version of prompt
-- "open_generation_rubrics.csv" contains the rubric information used to evaluate 
+- "open_generation_rubrics.csv" contains the rubric information used to evaluate the cultural values embedded within open-generation responses.
   - Number: Rubric ID
   - Scale_EN: Dimension scale in English
   - Characteristics_EN: Dimension characteristics in English
