@@ -7,12 +7,12 @@ This repository contains the GLOBE-LLM benchmark, a novel benchmark developed to
 3. Institutional Collectivism
 4. In-group Collectivisim
 5. Gender Egalitarianism
-6. UNcertainity Avoidance
+6. Uncertainty Avoidance
 7. Assertiveness
 8. Future Orientation
 9. Humane Orientation
 
-GLOBE-LLM consists of two separate forms of prompting: closed-ended and open-generation. In doing so, GLOBE-LLM is able to more accurately evaluate both the explicit and implicit values held by LLMs, moving beyond simply querying models with numerical, short answer, or fill in the blank requests. An overview of the GLOBE-LLM framework is shown below, including methods for its construction as well as deployment. Notably, we also introduce the LLMs-as-a-Jury protocol, which 
+GLOBE-LLM consists of two separate forms of prompting: closed-ended and open-generation. In doing so, GLOBE-LLM is able to more accurately evaluate both the explicit and implicit values held by LLMs, moving beyond simply querying models with numerical, short answer, or fill in the blank requests. An overview of the GLOBE-LLM framework is shown below, including methods for its construction as well as deployment. Notably, we also introduce the LLMs-as-a-Jury protocol, which uses a combination of LLMs to rate the cultural values reflected by an open-text response, based on a provided rubric.
 
 ![image002](https://github.com/user-attachments/assets/c17d04a1-2237-4df8-8e19-f268989498e3)
 
@@ -22,9 +22,26 @@ As a proof of concept, GLOBE-LLM was evaluated on 8 different LLMs, with 4 train
 
 This repository is organzied as follows. 
 
-1. "closed_prompts.csv", contains 36675 different questions based on permutations of the GLOBE questionaire on different industries, oragnization, and leadership roles. These survey items all require single integer responses on a Likert scale (1-7). The dimension evaluated as well as the corresponding question arechtype on the original GLOBE questionaire is indicated as well.
-2. The second file, "open_prompts.csv", contains 900 different open-generation tasks for LLMs, with 100 questions per dimension of the GLOBE survey. Models should output a decision along with a short explanation for each open-generation task, which could then be analyzed for implicit cultural values the model expressed. Both files contain the survey items in English and Chinese.
-3. The last file "rubric.csv" contains the rubric information used to evaluate both
+- "closed_prompts.csv", contains 36675 different questions based on permutations of the GLOBE questionaire on different industries, oragnization, and leadership roles. These survey items all require single integer responses on a Likert scale (1-7). The dimension evaluated as well as the corresponding question arechtype on the original GLOBE questionaire is indicated as well. Each row of the CSV corresponds to the following:
+  - Question_Num: Organized by dimension id - question number
+  - Dimension: GLOBE dimension being measured
+  - Prompt_EN: English version of the prompt
+  - Prompt_zhCN: Chinese version of prompt
+  - Industry: Type of industry LLM is asked to represent
+  - Organization: Type of organization LLM is asked to represent
+  - Leader_Role: Type of leader role LLM is asked to represent
+- The second file, "open_prompts.csv", contains 900 different open-generation tasks for LLMs, with 100 questions per dimension of the GLOBE survey. Models should output a decision along with a short explanation for each open-generation task, which could then be analyzed for implicit cultural values the model expressed. Both files contain the survey items in English and Chinese. Each row of the CSV corresponds to the following:
+  - Question_Num: Organized by dimension ID - question number
+  - Dimension: GLOBE dimension being measured
+  - Prompt_EN: English version of the prompt
+  - Prompt_zhCN: Mandarin version of prompt
+- The last file "open_generation_rubrics.csv" contains the rubric information used to evaluate 
+  - Number: Rubric ID
+  - Scale_EN: Dimension scale in English
+  - Characteristics_EN: Dimension characteristics in English
+  - Scale_zhCN: Dimension scale in Chinese
+  - Characteristics_zhCN: Dimension characteristics in Chinese
+  - Examples: 10 human-written examples to provide the model for each dimension
 
 ## Citation
 
