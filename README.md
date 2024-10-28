@@ -1,3 +1,34 @@
-# GLOBE-LLM-Benchmark
+# GLOBE-LLM
 
-This repository contains two versions of cultural value benchmarks designed for LLMs based on the GLOBE survey. The first file, "closed_prompts.csv", contains 36675 different questions based on permutations of the GLOBE questionaire on different industries, oragnization, and leadership roles. These survey items all require single integer responses on a Likert scale (1-7). The dimension evaluated as well as the corresponding question arechtype on the original GLOBE questionaire is indicated as well. The second file, "open_prompts.csv", contains 90 different open-generation tasks for LLMs, with 10 questions per dimension of the GLOBE survey. Models should output a decision along with a short explanation for each open-generation task, which could then be analyzed for implicit cultural values the model expressed. Both files contain the survey items in English and Chinese.
+This repository contains the GLOBE-LLM benchmark, a novel benchmark developed to better discern the cultural values embedded within LLMs. GLOBE-LLM is built upon the GLOBE framework, which consists of 9 different cultural dimensions as follows:
+
+1. Performance Orientation
+2. Power Distance
+3. Institutional Collectivism
+4. In-group Collectivisim
+5. Gender Egalitarianism
+6. UNcertainity Avoidance
+7. Assertiveness
+8. Future Orientation
+9. Humane Orientation
+
+GLOBE-LLM consists of two separate forms of prompting: closed-ended and open-generation. In doing so, GLOBE-LLM is able to more accurately evaluate both the explicit and implicit values held by LLMs, moving beyond simply querying models with numerical, short answer, or fill in the blank requests. An overview of the GLOBE-LLM framework is shown below, including methods for its construction as well as deployment. Notably, we also introduce the LLMs-as-a-Jury protocol, which 
+
+![image002](https://github.com/user-attachments/assets/c17d04a1-2237-4df8-8e19-f268989498e3)
+
+As a proof of concept, GLOBE-LLM was evaluated on 8 different LLMs, with 4 trained primarily on English and 4 trained primarily on Chinese. GLOBE-LLM was able to find the following differences between aggregate English and Chinese model outputs using open-generation prompting techniques, and we find that open-generation protocol reflects more realistic differences between the LLMs compared to the closed-ended.
+
+<img width="697" alt="radar_plot" src="https://github.com/user-attachments/assets/16891a72-feb4-4c1c-85f5-221970d23dd9">
+
+This repository is organzied as follows. 
+
+1. "closed_prompts.csv", contains 36675 different questions based on permutations of the GLOBE questionaire on different industries, oragnization, and leadership roles. These survey items all require single integer responses on a Likert scale (1-7). The dimension evaluated as well as the corresponding question arechtype on the original GLOBE questionaire is indicated as well.
+2. The second file, "open_prompts.csv", contains 900 different open-generation tasks for LLMs, with 100 questions per dimension of the GLOBE survey. Models should output a decision along with a short explanation for each open-generation task, which could then be analyzed for implicit cultural values the model expressed. Both files contain the survey items in English and Chinese.
+3. The last file "rubric.csv" contains the rubric information used to evaluate both
+
+## Citation
+
+Please cite this paper if you use GLOBE-LLM in your work or find it useful:
+```
+Placeholder
+```
