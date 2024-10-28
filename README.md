@@ -20,7 +20,7 @@ As a proof of concept, GLOBE-LLM was evaluated on 8 different LLMs, with 4 train
 
 <img width="697" alt="radar_plot" src="https://github.com/user-attachments/assets/16891a72-feb4-4c1c-85f5-221970d23dd9">
 
-This repository is organzied as follows. 
+## Benchmark Organization
 
 - "closed_prompts.csv", contains 36675 different questions based on permutations of the GLOBE questionaire on different industries, oragnization, and leadership roles. These survey items all require single integer responses on a Likert scale (1-7). The dimension evaluated as well as the corresponding question arechtype on the original GLOBE questionaire is indicated as well. Each row of the CSV corresponds to the following:
   - Question_Num: Organized by dimension id - question number
@@ -30,12 +30,12 @@ This repository is organzied as follows.
   - Industry: Type of industry LLM is asked to represent
   - Organization: Type of organization LLM is asked to represent
   - Leader_Role: Type of leader role LLM is asked to represent
-- The second file, "open_prompts.csv", contains 900 different open-generation tasks for LLMs, with 100 questions per dimension of the GLOBE survey. Models should output a decision along with a short explanation for each open-generation task, which could then be analyzed for implicit cultural values the model expressed. Both files contain the survey items in English and Chinese. Each row of the CSV corresponds to the following:
+- "open_prompts.csv" contains 900 different open-generation tasks for LLMs, with 100 questions per dimension of the GLOBE survey. Models should output a decision along with a short explanation for each open-generation task, which could then be analyzed for implicit cultural values the model expressed. Both files contain the survey items in English and Chinese. Each row of the CSV corresponds to the following:
   - Question_Num: Organized by dimension ID - question number
   - Dimension: GLOBE dimension being measured
   - Prompt_EN: English version of the prompt
   - Prompt_zhCN: Mandarin version of prompt
-- The last file "open_generation_rubrics.csv" contains the rubric information used to evaluate 
+- "open_generation_rubrics.csv" contains the rubric information used to evaluate 
   - Number: Rubric ID
   - Scale_EN: Dimension scale in English
   - Characteristics_EN: Dimension characteristics in English
