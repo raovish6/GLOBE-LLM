@@ -1,6 +1,6 @@
-# GLOBE-LLM
+# LLM-GLOBE
 
-This repository contains the GLOBE-LLM benchmark, a novel benchmark developed to better discern the cultural values embedded within LLMs. GLOBE-LLM is built upon the GLOBE framework, which consists of 9 different cultural dimensions as follows:
+This repository contains the LLM-GLOBE benchmark, a novel benchmark developed to better discern the cultural values embedded within LLMs. LLM-GLOBE is built upon the GLOBE framework, which consists of 9 different cultural dimensions as follows:
 
 1. Performance Orientation
 2. Power Distance
@@ -12,11 +12,11 @@ This repository contains the GLOBE-LLM benchmark, a novel benchmark developed to
 8. Future Orientation
 9. Humane Orientation
 
-GLOBE-LLM consists of two separate forms of prompting: closed-ended and open-generation. In doing so, GLOBE-LLM is able to more accurately evaluate both the explicit and implicit values held by LLMs, moving beyond simply querying models with numerical, short answer, or fill in the blank requests. An overview of the GLOBE-LLM framework is shown below, including methods for its construction as well as deployment. Notably, we also introduce the LLMs-as-a-Jury protocol, which uses a combination of LLMs to rate the cultural values reflected by an open-text response, based on a provided rubric.
+LLM-GLOBE consists of two separate forms of prompting: closed-ended and open-generation. In doing so, LLM-GLOBE is able to more accurately evaluate both the explicit and implicit values held by LLMs, moving beyond simply querying models with numerical, short answer, or fill in the blank requests. An overview of the LLM-GLOBE framework is shown below, including methods for its construction as well as deployment. Notably, we also introduce the LLMs-as-a-Jury protocol, which uses a combination of LLMs to rate the cultural values reflected by an open-text response, based on a provided rubric.
 
 ![image002](https://github.com/user-attachments/assets/c17d04a1-2237-4df8-8e19-f268989498e3)
 
-As a proof of concept, GLOBE-LLM was evaluated on 8 different LLMs, with 4 trained primarily on English and 4 trained primarily on Chinese. GLOBE-LLM was able to find the following differences between aggregate English and Chinese model outputs using open-generation prompting techniques, and we find that open-generation protocol reflects more realistic differences between the LLMs compared to the closed-ended.
+As a proof of concept, LLM-GLOBE was evaluated on 8 different LLMs, with 4 trained primarily on English and 4 trained primarily on Chinese. LLM-GLOBE was able to find the following differences between aggregate English and Chinese model outputs using open-generation prompting techniques, and we find that open-generation protocol reflects more realistic differences between the LLMs compared to the closed-ended.
 
 <img width="697" alt="radar_plot" src="https://github.com/user-attachments/assets/16891a72-feb4-4c1c-85f5-221970d23dd9">
 
@@ -47,7 +47,7 @@ As a proof of concept, GLOBE-LLM was evaluated on 8 different LLMs, with 4 train
 
 ## Citation
 
-Please cite this paper if you use GLOBE-LLM in your work or find it useful:
+Please cite this paper if you use LLM-GLOBE in your work or find it useful:
 ```
 Placeholder
 ```
