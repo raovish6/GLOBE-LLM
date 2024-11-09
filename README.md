@@ -1,6 +1,8 @@
 # LLM-GLOBE
 
-This repository contains the LLM-GLOBE benchmark, a novel benchmark developed to better discern the cultural values embedded within LLMs. LLM-GLOBE is built upon the GLOBE framework, which consists of 9 different cultural dimensions as follows:
+This repository contains the LLM-GLOBE benchmark, a novel benchmark developed to better discern the cultural values embedded within LLMs. See the full paper here.
+
+LLM-GLOBE is built upon the GLOBE framework, which consists of 9 different cultural dimensions as follows:
 
 1. Performance Orientation
 2. Power Distance
@@ -12,7 +14,7 @@ This repository contains the LLM-GLOBE benchmark, a novel benchmark developed to
 8. Future Orientation
 9. Humane Orientation
 
-LLM-GLOBE consists of two separate forms of prompting: closed-ended and open-generation. In doing so, LLM-GLOBE is able to more accurately evaluate both the explicit and implicit values held by LLMs, moving beyond simply querying models with numerical, short answer, or fill in the blank requests. An overview of the LLM-GLOBE framework is shown below, including methods for its construction as well as deployment. Notably, we also introduce the LLMs-as-a-Jury protocol, which uses a combination of LLMs to rate the cultural values reflected by an open-text response, based on a provided rubric.
+LLM-GLOBE consists of two separate forms of prompting: closed-ended and open-generation. In doing so, LLM-GLOBE is able to more accurately evaluate both the explicit and implicit values held by LLMs, moving beyond simply querying models with numerical, short answer, or fill in the blank requests. An overview of the LLM-GLOBE framework is shown below, including methods for its construction as well as deployment. Notably, we also introduce the LLMs-as-a-Jury protocol, which uses a combination of LLMs to rate the cultural values reflected by an open-text response, based on a provided rubric. While we provide both closed-ended and open-generation questionaires, we found through our experiments that the open-generation questionaire is more representative of latent model values, and we therefore recommend future studies using this benchmark to primarily center their analysis around open-generation. The full paper contains more information on the difference in results.
 
 ![image002](https://github.com/user-attachments/assets/c17d04a1-2237-4df8-8e19-f268989498e3)
 
