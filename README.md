@@ -51,5 +51,11 @@ As a proof of concept, LLM-GLOBE was evaluated on 8 different LLMs, with 4 train
 
 Please cite this paper if you use LLM-GLOBE in your work or find it useful:
 ```
-Placeholder
+title={LLM-GLOBE: A Benchmark Evaluating the Cultural Values Embedded in LLM Output}, 
+author={Elise Karinshak and Amanda Hu and Kewen Kong and Vishwanatha Rao and Jingren Wang and Jindong Wang and Yi Zeng},
+year={2024},
+eprint={2411.06032},
+archivePrefix={arXiv},
+primaryClass={cs.CL},
+url={https://arxiv.org/abs/2411.06032}
 ```
