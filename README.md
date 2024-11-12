@@ -1,6 +1,6 @@
 # LLM-GLOBE
 
-This repository contains the LLM-GLOBE benchmark, a novel benchmark developed to better discern the cultural values embedded within LLMs. See the full paper here.
+This repository contains the LLM-GLOBE benchmark, a novel benchmark developed to better discern the cultural values embedded within LLMs. See the full paper [here](https://arxiv.org/abs/2411.06032).
 
 LLM-GLOBE is built upon the GLOBE framework, which consists of 9 different cultural dimensions as follows:
 
